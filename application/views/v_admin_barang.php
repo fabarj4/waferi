@@ -58,7 +58,7 @@
         <li class="active"><a href="#!">Laporan</a></li>
         <li class=""><a href="#!">Penjualan</a></li>
         <li class=""><a href="#!">User</a></li>
-        <li class=""><a href="/logout">Logout</a></li>
+        <li class=""><a href="#!">Logout</a></li>
       </div>
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>

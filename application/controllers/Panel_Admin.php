@@ -1,5 +1,5 @@
 <?php @session_start();
-class Panel extends CI_Controller{
+class Panel_Admin extends CI_Controller{
 
  function __construct(){
    parent::__construct();
@@ -7,7 +7,7 @@ class Panel extends CI_Controller{
  }
 
  function index(){
-		$this->load->view('v_panel');
+		$this->load->view('v_admin_main');
 	}
 }
  ?>

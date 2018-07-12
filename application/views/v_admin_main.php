@@ -52,7 +52,7 @@
     <ul id="slide-out" class="sidenav sidenav-fixed">
       <li>
         <li class="headerImage"><center><img class="responsive-img" src="<?php echo base_url('/asset/image/logo.png')?>" alt="Logo" width="150px" height="150px"></center></li>
-        <li class="headerText"><center>NAMA USER</center></li>
+        <li class="headerText"><center>ADMIN</center></li>
       </li>
       <div class="headerContent scroll">
         <li class="active"><a href="#!">Laporan</a></li>

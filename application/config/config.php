@@ -23,7 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/waferi/';
+if($_SERVER['SERVER_NAME']=='waferi.com'){
+    $config['base_url'] = 'http://waferi.com/';
+}else{
+    $config['base_url'] = 'http://localhost/waferi/';
+}
+
 
 /*
 |--------------------------------------------------------------------------

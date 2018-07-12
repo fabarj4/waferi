@@ -3,8 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
-
+  <title>Waferi - Salesman Page</title>
+    <link rel="icon" href="/logo.ico" type="image/x-icon">
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="<?php echo base_url('asset/css/materialize.min.css')?>" type="text/css" rel="stylesheet" media="screen,projection"/>

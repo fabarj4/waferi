@@ -9,11 +9,22 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="<?php echo base_url('asset/css/materialize.min.css')?>" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="<?php echo base_url('asset/css')?>" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style>
+  .container{
+    margin-top: 25px;
+    padding: 5px;
+  }
+  </style>
 </head>
 <body>
-  <div class="row">
+  <div class="row container">
     <form class="col s12">
       <div class="row">
+        <div class="col s12">
+          <center><img src="<?php echo base_url('/asset/image/logo.png')?>" alt="Logo"></center>
+          <center><h5>Login</h5></center>
+        </div>
         <div class="input-field col s12">
           <input id="username" type="text" class="validate">
           <label for="username">Username</label>

@@ -1,5 +1,5 @@
 <?php
-class Login extends CI_Controller{
+class Panel extends CI_Controller{
 
  function __construct(){
    parent::__construct();
@@ -7,7 +7,7 @@ class Login extends CI_Controller{
  }
 
  function index(){
-		$this->load->view('v_login');
+		$this->load->view('v_panel');
 	}
 }
  ?>

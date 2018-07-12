@@ -67,7 +67,7 @@
     </style>
 </head>
 <body>
-<nav> <!-- navbar content here  -->
+<nav id="nav"> <!-- navbar content here  -->
     <ul id="slide-out" class="sidenav sidenav-fixed">
         <li>
         <li class="headerImage">
@@ -79,10 +79,10 @@
         </li>
         </li>
         <div class="headerContent scroll">
-            <li class="active"><a href="/">Dashboard</a></li>
-            <li class=""><a href="/barang">Barang</a></li>
-            <li class=""><a href="#!">Laporan</a></li>
-            <li class=""><a href="/logout">Logout</a></li>
+            <li id="dashboard" class=""><a href="/">Dashboard</a></li>
+            <li id="barang" class=""><a href="/barang">Barang</a></li>
+            <li id="laporan" class=""><a href="#!">Laporan</a></li>
+            <li id="logout" class=""><a href="/logout">Logout</a></li>
         </div>
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>

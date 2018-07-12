@@ -16,8 +16,6 @@
                                     <h5>PT. Waferi Laris Manis</h5>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -105,5 +103,24 @@
 
         chart.draw(data, options);
     }
+
+
+
+
+
+</script>
+
+<!-- fungsi ini digunakan untuk menandai menu yang di akses pada nav -->
+<script type="text/javascript">
+$(document).ready(function(){
+  let halaman = 'dashboard';
+  menus = this.querySelector('nav').getElementsByTagName('li');
+  for(let i=0;i<menus.length;i++){
+    if(menus[i].className === "active" && menus[i].id !== halaman){
+      menus[i].classList.remove("active");
+    }
+  }
+  this.querySelector('#'+halaman).className = "active";
+});
 </script>
 </body>

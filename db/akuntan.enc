@@ -204,6 +204,21 @@ INSERT INTO `user` (`username`, `id`, `pass`, `level`) VALUES
 ('manager', 2, 'manager', 'manager'),
 ('accounting', 3, 'accounting', 'accounting');
 
+DROP TABLE IF EXISTS `t_barang`;
+
+CREATE TABLE `t_barang` (
+  `ID_BARANG` int(11) NOT NULL AUTO_INCREMENT,
+  `NM_BARANG` varchar(250) NOT NULL,
+  `STOCK` int(11) NOT NULL,
+  `TGL_UPDATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID_BARANG`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Data for the table `t_barang` */
+
+insert  into `t_barang`(`ID_BARANG`,`NM_BARANG`,`STOCK`,`TGL_UPDATE`) values 
+(1,'WAFERI COKELAT',324,'2018-07-15 21:24:36');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

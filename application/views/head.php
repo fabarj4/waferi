@@ -81,7 +81,7 @@
         <div class="headerContent scroll">
             <li id="dashboard" class=""><a href="/">Dashboard</a></li>
             <li id="barang" class=""><a href="/barang">Barang</a></li>
-            <li id="laporan" class=""><a href="#!">Laporan</a></li>
+            <li id="laporan" class=""><a href="/laporan">Laporan</a></li>
             <li id="logout" class=""><a href="/logout">Logout</a></li>
         </div>
     </ul>

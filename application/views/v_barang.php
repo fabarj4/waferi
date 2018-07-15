@@ -59,10 +59,12 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.material.min.js"></script>
 <script type="text/javascript" src="/asset/plugins/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
             $('.modal').modal();
             $('#idBarang').formSelect();
+            moment.locale('id-ID');
 
             let halaman = 'barang';
             menus = this.querySelector('nav').getElementsByTagName('li');
@@ -86,10 +88,11 @@
                     var data = x.data;
                     var no = 1;
                     $.each(data, function (c, d) {
+                        var waktu = moment(d.TGL_UPDATE).format('LLL');
                         html += "<tr><td>" + no + "</td>";
                         html += "<td>" + d.NM_BARANG + "</td>";
-                        html += "<td>" + d.STOCK+ "</td>";
-                        html += "<td>" + d.TGL_UPDATE+ "</td></tr>";
+                        html += "<td>" + d.STOCK + "</td>";
+                        html += "<td>" + waktu + "</td></tr>";
                         no++;
                     })
                 }).always(function () {

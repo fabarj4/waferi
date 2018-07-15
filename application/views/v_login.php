@@ -58,19 +58,6 @@
                 dataType: 'json'
             }).done(function (x) {
                 window.location.href = "/"+x.url;
-//            if (x) {
-//                if (!x.data) {
-//                    $this.html($this.data('original-text'));
-//                }
-//                swal({
-//                    title: x.title,
-//                    text: x.text,
-//                    type: x.tipe,
-//                    timer: 2000
-//                }).then(function () {
-//                    window.location.reload();
-//                });
-//            }
             });
         }
     })

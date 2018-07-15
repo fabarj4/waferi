@@ -41,9 +41,9 @@
                 <table id="example" class="responsive-table" style="width:100%">
                     <thead>
                     <tr>
-                        <th width="1%">No.</th>
+                        <th>No.</th>
                         <th>Nama</th>
-                        <th width="5%">Stok</th>
+                        <th>Stok</th>
                         <th>Tanggal Update</th>
                     </tr>
                     </thead>
@@ -73,15 +73,6 @@
             }
             this.querySelector('#' + halaman).className = "active";
 
-            $('#example').DataTable({
-                columnDefs: [
-                    {
-                        className: 'dt-body-left'
-                    }
-                ],
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
-            });
-
             stokBarang();
 
             function stokBarang() {
@@ -103,6 +94,14 @@
                     })
                 }).always(function () {
                     $('#example tbody').html(html);
+                    $('#example').DataTable({
+                        columnDefs: [
+                            {
+                                className: 'dt-body-left'
+                            }
+                        ],
+                        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+                    });
                 });
             }
 

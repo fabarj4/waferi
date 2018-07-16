@@ -2,7 +2,7 @@
 <link type="text/css" rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css"/>
 <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.material.min.css"/>
-<link type="text/css" rel="stylesheet" href="/asset/plugins/sweetalert2/dist/sweetalert2.min.css"/>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url('asset/plugins/sweetalert2/dist/sweetalert2.min.css') ?>"/>
 <style type="text/css">
     .dataTables_length .form-control.input-sm {
         display: block;
@@ -58,7 +58,7 @@
 <!--  Scripts-->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.material.min.js"></script>
-<script type="text/javascript" src="/asset/plugins/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url('asset/plugins/sweetalert2/dist/sweetalert2.all.min.js') ?>"></script>
 <script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -97,14 +97,14 @@
                     })
                 }).always(function () {
                     $('#example tbody').html(html);
-                    $('#example').DataTable({
-                        columnDefs: [
-                            {
-                                className: 'dt-body-left'
-                            }
-                        ],
-                        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
-                    });
+//                    $('#example').DataTable({
+//                        columnDefs: [
+//                            {
+//                                className: 'dt-body-left'
+//                            }
+//                        ],
+//                        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+//                    });
                 });
             }
 

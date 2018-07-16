@@ -79,10 +79,10 @@
         </li>
         </li>
         <div class="headerContent scroll">
-            <li id="dashboard" class=""><a href="/">Dashboard</a></li>
-            <li id="barang" class=""><a href="/barang">Barang</a></li>
-            <li id="laporan" class=""><a href="/laporan">Laporan</a></li>
-            <li id="logout" class=""><a href="/logout">Logout</a></li>
+            <li id="dashboard" class=""><a href="<?php echo base_url() ?>">Dashboard</a></li>
+            <li id="barang" class=""><a href="<?php echo base_url() ?>barang">Barang</a></li>
+            <li id="laporan" class=""><a href="<?php echo base_url() ?>laporan">Laporan</a></li>
+            <li id="logout" class=""><a href="<?php echo base_url() ?>logout">Logout</a></li>
         </div>
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>

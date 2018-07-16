@@ -52,7 +52,7 @@
                     data: {tgl: time},
                     dataType: 'json'
                 }).done(function (x) {
-                        window.location.href = "/neraca";
+                        window.location.href = "<?php echo base_url() ?>neraca";
                 });
             });
         }

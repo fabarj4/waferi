@@ -1,7 +1,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="<?php echo base_url('asset/css/materialize.min.css') ?>" type="text/css" rel="stylesheet"
       media="screen,projection"/>
-<link type="text/css" rel="stylesheet" href="/asset/css/cetakBlank.css"/>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url('/asset/css/cetakBlank.css') ?>"/>
 <style type="text/css">
     .text-center {
         text-align: center !important;
@@ -57,7 +57,7 @@
     <br/>
     <br/>
     <div class="tools">
-        <a href="/laporan" class="waves-effect waves-light btn blue darken-4"><i
+        <a href="<?php echo base_url() ?>laporan" class="waves-effect waves-light btn blue darken-4"><i
                     class="material-icons left">arrow_back</i> Kembali</a>
         <a id="btnCetak" class="waves-effect waves-light btn green darken-2"><i class="material-icons left">print</i>
             Cetak</a>

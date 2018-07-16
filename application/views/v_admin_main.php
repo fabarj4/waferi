@@ -52,7 +52,7 @@
                         <i class="material-icons">attach_money</i>
                         <br>
                         <br>
-                        <h3>5.000.000</h3>
+                        <h4>5.000.000</h4>
                     </div>
                     <div class="card-action">
                         <h6>Pendapatan Penjualan</h6>

@@ -27,7 +27,7 @@ class M_Barang extends CI_Model
                 break;
             case 'stok':
                 $SQL = $this->db->get('akuntan.t_barang');
-                $return->data = $SQL->result_array(); ;
+                $return->data = $SQL->result_array();
                 break;
         }
         echo json_encode($return);

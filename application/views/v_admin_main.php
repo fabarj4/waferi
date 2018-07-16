@@ -39,7 +39,7 @@
                 <div class="card-panel rekap text-center teal darken-3 white-text">
                     <div class="card-content ">
                         <i class="material-icons">shopping_cart</i>
-                        <h1>2500</h1>
+                        <h1><?php print $jmlData->jmlBarang ?></h1>
                     </div>
                     <div class="card-action">
                         <h6>Stok Barang</h6>

@@ -57,8 +57,7 @@
                 data: {tipe: 'login', u: u, p: p},
                 dataType: 'json'
             }).done(function (x) {
-                window.location.href = "/"+x.url; //before
-                window.location.href = "<?php echo base_url() ?>/"+x.url; //after
+                window.location.href = "<?php echo base_url() ?>/"+x.url;
             });
         }
     })

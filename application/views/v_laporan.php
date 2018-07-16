@@ -1,4 +1,4 @@
-<?php include 'head.php' ?>
+<?php include 'head_admin.php' ?>
 <style type="text/css">
     .btnReport {
         margin-bottom: 2%;

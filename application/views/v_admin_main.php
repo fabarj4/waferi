@@ -1,4 +1,4 @@
-<?php include 'head.php'?>
+<?php include 'head_admin.php'?>
 <body style="background: #ebe7e7">
 <div class="main">
     <div class="container">

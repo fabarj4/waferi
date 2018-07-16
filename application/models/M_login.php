@@ -7,28 +7,31 @@
  */
 class M_Login extends CI_Model {
 
+  function cek_login($where){
+    return $this->db->get_where('user',$where);
+  }
 }
 
-if($_POST){
-    $return = new stdClass();
-    $tipe = $_POST['tipe'];
-    switch ($tipe){
-        case 'login':
-            $user = $_POST['u'];
-            $pass = $_POST['p'];
-            if($user=='admin'){
-                $stat = 'v_admin_main';
-                $url = 'Panel_Admin';
-                $_SESSION['statUser'] = 1;
-            }else{
-                $stat = 'v_panel';
-                $url = 'Panel';
-                $_SESSION['statUser'] = 2;
-            }
-            $return->stat = $stat;
-            $return->url = $url;
-            break;
-    }
-    echo json_encode($return);
-    die();
-}
+// if($_POST){
+//     $return = new stdClass();
+//     $tipe = $_POST['tipe'];
+//     switch ($tipe){
+//         case 'login':
+//             $user = $_POST['u'];
+//             $pass = $_POST['p'];
+//             if($user=='admin'){
+//                 $stat = 'v_admin_main';
+//                 $url = 'Panel_Admin';
+//                 $_SESSION['statUser'] = 1;
+//             }else{
+//                 $stat = 'v_panel';
+//                 $url = 'Panel';
+//                 $_SESSION['statUser'] = 2;
+//             }
+//             $return->stat = $stat;
+//             $return->url = $url;
+//             break;
+//     }
+//     echo json_encode($return);
+//     die();
+// }

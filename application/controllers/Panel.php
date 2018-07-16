@@ -1,4 +1,4 @@
-<?php @session_start();
+<?php
 class Panel extends CI_Controller{
 
  function __construct(){

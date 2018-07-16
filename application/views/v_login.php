@@ -49,15 +49,23 @@
 <script src="<?php echo base_url('asset/js/init.js') ?>"></script>
 <script type="text/javascript">
     $('#btnLogin').click(function () {
-        var u = $('#username').val();
-        var p = $('#password').val();
-        if (u && p) {
+        var username = $('#username').val();
+        var password = $('#password').val();
+        if (username && password) {
             $.ajax({
+                url : "<?php echo base_url()?>login/actlogin",
                 type: 'post',
-                data: {tipe: 'login', u: u, p: p},
-                dataType: 'json'
-            }).done(function (x) {
-                window.location.href = "<?php echo base_url() ?>"+x.url;
+                data: {username: username, password: password},
+                dataType: 'json',
+                success: function(response){
+                  if(response.role === ''){
+                    M.toast({html: response.message})
+                  }else if(response.role === 'user'){
+                    window.location.replace("<?php echo base_url()?>Panel");
+                  }else{
+                    window.location.replace("<?php echo base_url()?>Panel_Admin");
+                  }
+                }
             });
         }
     })

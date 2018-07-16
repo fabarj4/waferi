@@ -57,6 +57,16 @@
             }
         }
 
+        @media only screen and (min-width: 992px){
+          nav{
+            padding-left: 300px;
+            /* margin-left: 300px; */
+          }
+          .nav-text{
+            margin-left: 10px;
+          }
+        }
+
         .text-center {
     text-align: center !important;
         }
@@ -79,13 +89,14 @@
         </li>
         </li>
         <div class="headerContent scroll">
-            <li id="dashboard" class=""><a href="<?php echo base_url() ?>">Dashboard</a></li>
+            <li id="dashboard" class=""><a href="<?php echo base_url() ?>Panel_Admin">Dashboard</a></li>
             <li id="barang" class=""><a href="<?php echo base_url() ?>barang">Barang</a></li>
             <li id="laporan" class=""><a href="<?php echo base_url() ?>laporan">Laporan</a></li>
-            <li id="logout" class=""><a href="<?php echo base_url() ?>logout">Logout</a></li>
+            <li id="logout" class=""><a href="<?php echo base_url() ?>login/actlogout">Logout</a></li>
         </div>
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <div id="nav-text" class="brand-logo nav-text"></div>
 </nav>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="<?php echo base_url('asset/js/materialize.js') ?>"></script>

@@ -1,4 +1,4 @@
-<?php @session_start();
+<?php
 
 class Panel_Admin extends CI_Controller
 {

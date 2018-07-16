@@ -1,4 +1,4 @@
-<?php @session_start();
+<?php
 
 class Barang extends CI_Controller
 {

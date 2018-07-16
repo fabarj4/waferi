@@ -91,8 +91,8 @@
                     $.each(data, function (c, d) {
                         var waktu = moment(d.TGL_UPDATE).format('LLL');
                         html += "<tr><td>" + no + "</td>";
-                        html += "<td>" + d.NM_BARANG + "</td>";
-                        html += "<td>" + d.STOCK + "</td>";
+                        html += "<td>" + d.nm_barang + "</td>";
+                        html += "<td>" + d.stock + "</td>";
                         html += "<td>" + waktu + "</td></tr>";
                         no++;
                     })

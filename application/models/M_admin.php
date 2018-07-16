@@ -15,7 +15,7 @@ class M_Admin extends CI_Model
 
     public function data()
     {
-        $SQL = "SELECT SUM(STOCK)AS jmlBarang FROM akuntan.`t_barang`";
+        $SQL = "SELECT SUM(STOCK)AS jmlBarang FROM akuntan.`barang`";
         $query = $this->db->query($SQL);
         return $query->row();
     }

@@ -21,12 +21,12 @@ class M_Barang extends CI_Model
             case 'addStok':
                 $id = $_POST['id'];
                 $stok = $_POST['stok'];
-                $SQL = "UPDATE `akuntan`.`t_barang` SET `STOCK` = `STOCK`+$stok WHERE `ID_BARANG` = '$id'";
+                $SQL = "UPDATE `akuntan`.`barang` SET `STOCK` = `STOCK`+$stok WHERE `ID_BARANG` = '$id'";
                 $query = $this->db->query($SQL);
                 $return->data = $query;
                 break;
             case 'stok':
-                $SQL = $this->db->get('akuntan.t_barang');
+                $SQL = $this->db->get('akuntan.barang');
                 $return->data = $SQL->result_array();
                 break;
         }

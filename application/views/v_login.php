@@ -60,7 +60,7 @@
                 success: function(response){
                   if(response.role === ''){
                     M.toast({html: response.message})
-                  }else if(response.role === 'user'){
+                  }else if(response.role === '0'){
                     window.location.replace("<?php echo base_url()?>Panel");
                   }else{
                     window.location.replace("<?php echo base_url()?>Panel_Admin");

@@ -20,7 +20,7 @@ class login extends CI_Controller{
       echo json_encode($data);
       return;
     }
-    $data = ['message'=>'sukses login','role'=> $result[0]->level];
+    $data = ['message'=>'sukses login','role'=> $result[0]->tipe];
     $sessionData = array('login' => true, 'data' => $result);
     $this->session->set_userdata($sessionData);
     echo json_encode($data);

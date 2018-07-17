@@ -19,7 +19,7 @@
           <tr>
             <th><b>Pendapatan</b></th>
             <th></th>
-            <th><b><?php echo number_format($tampil_pendapatan, 0, ".", "."). "<br>";?></b></th>
+            <th style="text-align: right"><b><?php echo number_format($tampil_pendapatan, 0, ".", "."). "<br>";?></b></th>
           </tr>
           <tr>
             <td><b>Beban:</b></td>
@@ -28,23 +28,23 @@
           </tr>
           <tr>
             <td>Beban Gaji</td>
-            <td><?php echo number_format($tampil_bebangaji, 0, ".", "."). "<br>";?></td>
+            <td style="text-align: right"><?php echo number_format($tampil_bebangaji, 0, ".", "."). "<br>";?></td>
             <td></td>
           </tr>
           <tr>
             <td>Pengeluaran Perusahaan Untuk Operasional</td>
-            <td><?php echo number_format($tampil_pengeluaran, 0, ".", "."). "<br>";?></td>
+            <td style="text-align: right"><?php echo number_format($tampil_pengeluaran, 0, ".", "."). "<br>";?></td>
             <td></td>
           </tr>
           <tr>
             <td>Pembelian Wafer dari Supplier</td>
-            <td><?php echo number_format($tampil_pembelian, 0, ".", "."). "<br>";?></td>
+            <td style="text-align: right"><?php echo number_format($tampil_pembelian, 0, ".", "."). "<br>";?></td>
             <td></td>
           </tr>
           <tr>
             <td><b>Total Beban</b></td>
             <td></td>
-            <td><b>
+            <td style="text-align: right"><b>
               <?php $total_beban = $tampil_bebangaji+$tampil_pengeluaran+$tampil_pembelian;
               echo number_format($total_beban, 0, ".", "."). "<br>";; ?>
             </b></td>
@@ -61,7 +61,7 @@
                ?>
             </b></td>
             <td></td>
-            <td><b>
+            <td style="text-align: right"><b>
               <?php $laba = $tampil_pendapatan-$total_beban;
               echo number_format(abs($laba), 0, ".", "."). "<br>";; ?>
             <b/></td>

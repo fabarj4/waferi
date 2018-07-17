@@ -27,8 +27,10 @@ class M_laba_rugi extends CI_Model
       return $Jumlah_pengeluaran->row()->result_pengeluaran;
     }
 
-    public function pembelian_wafer(){
-      $Jumlah_pembelian = $this->db->query('SELECT SUM(total_debit) as result_pembelian FROM jurnal_umum WHERE jurnal="Pembelian"');
+    public function pembelian_wafer($firstDate,$date){
+        $query = "SELECT SUM(saldo) AS result_pembelian FROM jurnal_pembelian WHERE (`tgl_pembelian` BETWEEN '$firstDate'  AND '$date')";
+        $Jumlah_pembelian = $this->db->query($query);
+
       return $Jumlah_pembelian->row()->result_pembelian;
     }
 

@@ -67,6 +67,18 @@
                         window.location.href = "<?php echo base_url() ?>Laba_Rugi";
                 });
             });
+
+        $('#btnKas').click(function () {
+            var time = $('#tglLaporan').val();
+            $.ajax({
+                type: 'post',
+                url: 'Laporan/Tgl',
+                data: {tgl: time},
+                dataType: 'json'
+            }).done(function (x) {
+                window.location.href = "<?php echo base_url() ?>cashflow";
+            });
+        });
         }
     );
 </script>

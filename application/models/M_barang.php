@@ -35,7 +35,7 @@ VALUES ('$nm','$stok','$idVendor','$hargaB','$hargaJ')";
                 $SQL = "UPDATE `akuntan`.`barang` SET `stock` = `stock`+$stok WHERE `id_barang` = '$id'";
                 $query = $this->db->query($SQL);
 
-//                $sql2="insert into akuntan.jurnal_pembelian"
+//                $sql2="insert into akuntan.jurnal_pembelian(username, saldo, id_barang, jumlah) "
                 $return->data = $query;
                 break;
             case 'stok':

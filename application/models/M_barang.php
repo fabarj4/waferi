@@ -18,23 +18,49 @@ class M_Barang extends CI_Model
         $return = new stdClass();
         $tipe = $_POST['tipe'];
         switch ($tipe) {
+            case 'addBarang':
+                $idVendor = $_POST['supplier'];
+                $nm = strtoupper($_POST['nm']);
+                $stok = $_POST['stok'];
+                $hargaB = $_POST['hargaB'];
+                $hargaJ = $_POST['hargaJ'];
+                $SQL = "insert into akuntan.barang(nm_barang, stock, id_vendor, harga_beli, harga_jual) 
+VALUES ('$nm','$stok','$idVendor','$hargaB','$hargaJ')";
+                $query = $this->db->query($SQL);
+                $return->data = $query;
+                break;
             case 'addStok':
                 $id = $_POST['id'];
                 $stok = $_POST['stok'];
-                $SQL = "UPDATE `akuntan`.`barang` SET `STOCK` = `STOCK`+$stok WHERE `ID_BARANG` = '$id'";
+                $SQL = "UPDATE `akuntan`.`barang` SET `stock` = `stock`+$stok WHERE `id_barang` = '$id'";
                 $query = $this->db->query($SQL);
+
+//                $sql2="insert into akuntan.jurnal_pembelian"
                 $return->data = $query;
                 break;
             case 'stok':
                 $SQL = $this->db->get('akuntan.barang');
                 $return->data = $SQL->result_array();
                 break;
+            case 'supplier':
+                $SQL = $this->db->get('akuntan.supplier');
+                $data = $SQL->result_array();
+                $return->data = $data;
+                break;
+            case 'addSupplier':
+                $nm = strtoupper($_POST['nm']);
+                $hp = $_POST['hp'];
+                $adr = $_POST['adr'];
+                $data = array(
+                    'nama' => $nm,
+                    'no_hp' => $hp,
+                    'alamat' => $adr
+                );
+                $insert = $this->db->insert('akuntan.supplier', $data);
+                $return->data = $insert;
+                break;
         }
         echo json_encode($return);
         die();
     }
 }
-//
-//if ($_POST) {
-//
-//}

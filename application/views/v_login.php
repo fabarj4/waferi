@@ -61,7 +61,7 @@
                   if(response.role === ''){
                     M.toast({html: response.message})
                   }else if(response.role === '0'){
-                    window.location.replace("<?php echo base_url()?>Panel");
+                    window.location.replace("<?php echo base_url()?>Panel_User");
                   }else{
                     window.location.replace("<?php echo base_url()?>Panel_Admin");
                   }

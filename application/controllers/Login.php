@@ -7,7 +7,17 @@ class login extends CI_Controller{
  }
 
  function index(){
-		$this->load->view('v_login');
+   $login = $this->session->userdata('login');
+   if($login){
+     $data = $this->session->userdata('data');
+     if($data->tipe == 0){
+       redirect('Panel_User');
+     }else{
+       redirect('Panel_Admin');
+     }
+   }
+   
+   $this->load->view('v_login');
 	}
 
   function actlogin(){
@@ -21,7 +31,7 @@ class login extends CI_Controller{
       return;
     }
     $data = ['message'=>'sukses login','role'=> $result[0]->tipe];
-    $sessionData = array('login' => true, 'data' => $result);
+    $sessionData = array('login' => true, 'data' => $result[0]);
     $this->session->set_userdata($sessionData);
     echo json_encode($data);
   }

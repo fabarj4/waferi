@@ -25,13 +25,12 @@ class Welcome extends CI_Controller {
 		$login = $this->session->userdata('login');
 		if($login){
 			$data = $this->session->userdata('data');
-			if($data->role == 'user'){
-
+			if($data->tipe == 0){
+				redirect('Panel_User');
 			}else{
 				redirect('Panel_Admin');
 			}
 		}
 		redirect('login');
-		// redirect('login');
 	}
 }

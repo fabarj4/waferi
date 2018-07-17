@@ -39,9 +39,15 @@ class M_Neraca extends CI_Model
         return $items;
     }
 
-    public function jumlah_pendapatan(){
-        $Jumlah_Pendapatan = $this->db->query('SELECT SUM(total_debit) as result_pendapatan FROM jurnal_umum WHERE jurnal="Penjualan"');
-        return $Jumlah_Pendapatan->row()->result_pendapatan;
+    public function jumlah_pendapatan($f,$d){
+//        $Jumlah_Pendapatan = $this->db->query('SELECT SUM(total_debit) as result_pendapatan FROM jurnal_umum WHERE jurnal="Penjualan"');
+//        return $Jumlah_Pendapatan->row()->result_pendapatan;
+
+        $query = "SELECT SUM(jumlah)as jmlPenjualan FROM akuntan.`jurnal_penjualan` WHERE 
+(`tgl_penjualan` BETWEEN '$f'  AND '$d')";
+        $items = $this->db->query($query)->row();
+
+        return $items->jmlPenjualan;
     }
 
     public function beban_gaji(){

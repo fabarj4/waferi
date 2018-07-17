@@ -1,3 +1,4 @@
+<title>Waferi - Cashflow</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="<?php echo base_url('asset/css/materialize.min.css') ?>" type="text/css" rel="stylesheet"
       media="screen,projection"/>
@@ -16,22 +17,21 @@
     <table class="tblIsi">
         <tbody>
         <tr><th colspan="4">Arus kas dari Aktivitas Operasi</th></tr>
-        <tr><td></td><td>Kas diterima dari pelanggan</td><td align="right">xx.xxx.xxx</td><td></td></tr>
-        <tr><td></td><td>Dikurangi pembayaran kas untuk beban</td><td>xx.xxx.xxx</td><td></td></tr>
-        <tr><td></td><td>Arus kas bersih dari aktivitas operasi</td><td></td><td style="text-align: right">xx.xxx.xxx</td></tr>
+        <tr><td></td><td>Kas diterima dari pelanggan</td><td style="text-align: right"><?php print number_format($operasi, 0, ".", ".") ?></td><td></td></tr>
+        <tr><td></td><td>Dikurangi pembayaran kas untuk beban</td><td style="text-align: right"><?php print number_format($bebanOperasi, 0, ".", ".") ?></td><td></td></tr>
+        <tr><td></td><td>Arus kas bersih dari aktivitas operasi</td><td style="text-align: right"><td style="text-align: right"><?php print number_format($jmlOperasi, 0, ".", ".") ?></td></tr>
 
         <tr><th colspan="4">Arus kas dari Aktivitas investasi</th></tr>
-        <tr><td></td><td>Penjualan (Pembelian) Aktiva Tetap</td><td></td><td>(xx.xxx.xxx)</td></tr>
+        <tr><td></td>
+            <td>Penjualan (Pembelian) Aktiva Tetap</td>
+            <td></td><td style="text-align: right"><?php print number_format($investasi, 0, ".", ".") ?></td></tr>
 
         <tr><th colspan="4">Arus kas dari Aktivitas Pendanaan</th></tr>
-        <tr><td></td><td>Kas diterima sebagai investasi oleh pemilik</td><td>xx.xxx.xxx</td><td></td></tr>
-        <tr><td></td><td>Dikurangi penarikan oleh pemilik</td><td>xx.xxx.xxx</td><td></td></tr>
-        <tr><td></td><td>Arus kas bersih dari aktivitas pendanaan</td><td></td><td>xx.xxx.xxx</td></tr>
+        <tr><td></td><td>Kas diterima sebagai investasi oleh pemilik</td><td style="text-align: right"><?php print number_format($pendanaan['invest'], 0, ".", ".") ?></td><td></td></tr>
+        <tr><td></td><td>Dikurangi penarikan oleh pemilik</td><td style="text-align: right"><?php print number_format($pendanaan['tarik'], 0, ".", ".") ?></td><td></td></tr>
+        <tr><td></td><td>Arus kas bersih dari aktivitas pendanaan</td><td></td><td style="text-align: right"><?php print number_format($jmlPendanaan, 0, ".", ".") ?></td></tr>
 
-        <tr><td>Arus kas bersih dari aktivitas pendanaan</td><td></td><td>xx.xxx.xxx</td><td></td></tr>
-
-        <tr><th colspan="2">Arus kas dari Aktivitas Pendanaan</th><th></th><th>0</th></tr>
-        <tr><th colspan="2">Arus kas dari Aktivitas Pendanaan</th><th></th><th>xx.xxx.xxx</th></tr>
+        <tr><th colspan="2">KAS DAN SETARA KAS PADA AKHIR PERIODE</th><th></th><th style="text-align: right"><?php print number_format($kas, 0, ".", ".") ?></th></tr>
         </tbody>
     </table>
     <br/>

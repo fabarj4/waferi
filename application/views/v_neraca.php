@@ -1,3 +1,4 @@
+<title>Waferi - Neraca</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="<?php echo base_url('asset/css/materialize.min.css') ?>" type="text/css" rel="stylesheet"
       media="screen,projection"/>

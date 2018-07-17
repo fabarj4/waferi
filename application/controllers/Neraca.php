@@ -16,7 +16,7 @@ class Neraca extends CI_Controller
         $neraca['aktiva']= $this->m_neraca->aktiva($firstDate,$date);
         $neraca['ekuitas']= $this->m_neraca->ekuitas($firstDate,$date);
 
-        $tampil_pendapatan = $this->m_neraca->jumlah_pendapatan();
+        $tampil_pendapatan = $this->m_neraca->jumlah_pendapatan($firstDate,$date);
         $tampil_bebangaji = $this->m_neraca->beban_gaji();
         $tampil_pengeluaran = $this->m_neraca->pengeluaran();
         $tampil_pembelian = $this->m_neraca->pembelian_wafer($firstDate,$date);

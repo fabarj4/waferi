@@ -13,7 +13,7 @@ class Laba_Rugi extends CI_Controller
     {
         $firstDate=date('Y-m-1',strtotime($_SESSION['tgl']));
         $date=date('Y-m-d',strtotime($_SESSION['tgl']));
-        $data_pendapatan['tampil_pendapatan'] = $this->M_laba_rugi->jumlah_pendapatan();
+        $data_pendapatan['tampil_pendapatan'] = $this->M_laba_rugi->jumlah_pendapatan($firstDate,$date);
 
         $data_bebangaji['tampil_bebangaji'] = $this->M_laba_rugi->beban_gaji();
 

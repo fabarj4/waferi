@@ -44,7 +44,7 @@ DROP TABLE IF EXISTS `jurnal_kas`;
 
 CREATE TABLE `jurnal_kas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tgl_penerimaan` varchar(20) NOT NULL,
+  `tgl_penerimaan` date NOT NULL,
   `username` varchar(15) NOT NULL,
   `saldo` int(10) NOT NULL,
   `jenis` int(1) NOT NULL,
@@ -56,8 +56,8 @@ CREATE TABLE `jurnal_kas` (
 /*Data for the table `jurnal_kas` */
 
 insert  into `jurnal_kas`(`id`,`tgl_penerimaan`,`username`,`saldo`,`jenis`,`tipe`,`ket`) values 
-(1,'04 January 2017','1',233122,0,0,''),
-(2,'16 January 2017','2',230000,0,0,'');
+(1,'0000-00-00','1',233122,0,0,''),
+(2,'0000-00-00','2',230000,0,0,'');
 
 /*Table structure for table `jurnal_pembelian` */
 

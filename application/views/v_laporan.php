@@ -64,7 +64,7 @@
                     data: {tgl: time},
                     dataType: 'json'
                 }).done(function (x) {
-                        window.location.href = "<?php echo base_url() ?>laba_rugi";
+                        window.location.href = "<?php echo base_url() ?>Laba_Rugi";
                 });
             });
         }

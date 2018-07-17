@@ -55,6 +55,18 @@
                         window.location.href = "<?php echo base_url() ?>neraca";
                 });
             });
+
+            $('#btnLaba').click(function () {
+                var time = $('#tglLaporan').val();
+                $.ajax({
+                    type: 'post',
+                    url: 'Laporan/Tgl',
+                    data: {tgl: time},
+                    dataType: 'json'
+                }).done(function (x) {
+                        window.location.href = "<?php echo base_url() ?>laba_rugi";
+                });
+            });
         }
     );
 </script>

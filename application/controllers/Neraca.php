@@ -14,6 +14,7 @@ class Neraca extends CI_Controller
         $firstDate=date('Y-m-1',strtotime($_SESSION['tgl']));
         $date=date('Y-m-d',strtotime($_SESSION['tgl']));
         $neraca['aktiva']= $this->m_neraca->aktiva($firstDate,$date);
+        $neraca['kewajiban']= $this->m_neraca->kewajiban($firstDate,$date);
         $neraca['ekuitas']= $this->m_neraca->ekuitas($firstDate,$date);
 
         $tampil_pendapatan = $this->m_neraca->jumlah_pendapatan($firstDate,$date);

@@ -90,7 +90,9 @@
         </li>
         <div class="headerContent scroll">
             <li id="dashboard" class=""><a href="<?php echo base_url() ?>Panel_Admin">Dashboard</a></li>
+            <li id="pengguna" class=""><a href="<?php echo base_url() ?>pengguna">Pengguna</a></li>
             <li id="barang" class=""><a href="<?php echo base_url() ?>barang">Barang</a></li>
+            <li id="keuangan" class=""><a href="<?php echo base_url() ?>keuangan">Keuangan</a></li>
             <li id="laporan" class=""><a href="<?php echo base_url() ?>laporan">Laporan</a></li>
             <li id="logout" class=""><a href="<?php echo base_url() ?>login/actlogout">Logout</a></li>
         </div>

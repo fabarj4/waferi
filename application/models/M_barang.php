@@ -37,7 +37,7 @@ VALUES ('$nm','$stok','$idVendor','$hargaB','$hargaJ')";
                 $query = $this->db->query($SQL);
                 $sqlPrice = "select nm_barang as nm,harga_beli as beli from akuntan.barang WHERE id_barang='$id'";
                 $price = $this->db->query($sqlPrice)->row();
-                $username = $this->session->userdata['data'][0]->username;
+                $username = $this->session->userdata['data']->username;
                 $saldo = $stok * $price->beli;
                 $date = date("Y-m-d");
                 $sql2 = "INSERT INTO akuntan.jurnal_pembelian(tgl_pembelian,username, saldo, id_barang, jumlah,ket)

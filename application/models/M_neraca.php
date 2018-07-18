@@ -50,6 +50,18 @@ class M_Neraca extends CI_Model
         return $items->jmlPenjualan;
     }
 
+    public function kewajiban($f,$d){
+        $query = "SELECT ket,saldo FROM akuntan.`jurnal_kas` WHERE `jenis`=2 AND
+(`tgl_penerimaan` BETWEEN '$f'  AND '$d')";
+        $items['data'] = $this->db->query($query)->result_array();
+        $totalSaldo = 0;
+        foreach ($items['data'] as $index=>$data){
+            $totalSaldo = $totalSaldo + $data['saldo'];
+        }
+        $items['totalSaldo'] = $totalSaldo;
+        return $items;
+    }
+
     public function beban_gaji(){
         $Jumlah_bebangaji = $this->db->query('SELECT SUM(total_debit) as result_bebangaji FROM jurnal_umum WHERE jurnal="Penggajian"');
         return $Jumlah_bebangaji->row()->result_bebangaji;

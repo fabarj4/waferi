@@ -38,8 +38,13 @@
             <th colspan="2">Kewajiban</th>
         </tr>
         <tr>
-            <td>Utang Usaha</td>
-            <td style="text-align: right">0</td>
+            <?php
+            foreach ($kewajiban['data'] as $index => $item) { ?>
+        <tr>
+            <td><?php print $item['ket'] ?></td>
+            <td style="text-align: right"><?php print number_format(abs($item['saldo']), 0, ".", ".") ?></td>
+        </tr>
+        <?php } ?>
         </tr>
         <tr>
             <th colspan="2">Ekuitas</th>
@@ -78,7 +83,7 @@
     </table>
     <table class="tblIsi" style="width: 50%;float: left">
         <th style="text-align: right"><?php
-            print number_format(($ekuitas['totalSaldo'] + $labaRugi),0, ".", ".");
+            print number_format(($ekuitas['totalSaldo'] + $labaRugi +$kewajiban['totalSaldo']),0, ".", ".");
             ?></th>
     </table>
 

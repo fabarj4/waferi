@@ -17,7 +17,13 @@ class Panel_Admin extends CI_Controller
 
     function index()
     {
+        $firstDate=date('Y-m-1');
+        $date=date('Y-m-d');
+
         $data['jmlData'] = $this->m_admin->data();
+        $data['jmlPenjualan'] = $this->m_admin->penjualan($firstDate,$date);
+        $data['jmlPendapatan'] = $this->m_admin->pendapatan($firstDate,$date);
+        $data['PerBulan'] = $this->m_admin->jualBulan($date);
         $this->load->view('v_admin_main',$data);
     }
 }

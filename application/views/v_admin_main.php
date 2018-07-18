@@ -28,7 +28,7 @@
                 <div class="card-panel rekap text-center light-blue darken-3 white-text">
                     <div class="card-content ">
                         <i class="material-icons">business_center</i>
-                        <h1>300</h1>
+                        <h1><?php print $jmlPenjualan ?></h1>
                     </div>
                     <div class="card-action">
                         <h6>Hasil Penjualan</h6>
@@ -39,7 +39,7 @@
                 <div class="card-panel rekap text-center teal darken-3 white-text">
                     <div class="card-content ">
                         <i class="material-icons">shopping_cart</i>
-                        <h1><?php print $jmlData->jmlBarang ?></h1>
+                        <h1><?php print $jmlData ?></h1>
                     </div>
                     <div class="card-action">
                         <h6>Stok Barang</h6>
@@ -52,7 +52,7 @@
                         <i class="material-icons">attach_money</i>
                         <br>
                         <br>
-                        <h4>5.000.000</h4>
+                        <h4><?php print number_format($jmlPendapatan, 0, ".", ".") ?></h4>
                     </div>
                     <div class="card-action">
                         <h6>Pendapatan Penjualan</h6>
@@ -78,10 +78,11 @@
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
             ["Bulan", "Jumlah", { role: "style" } ],
-            ["April", 100, "#76A7FA"],
-            ["Mei", 250, "#76A7FA"],
-            ["Juni", 210, "#76A7FA"],
-            ["Juli", 300, "#76A7FA"]
+            <?php
+                foreach ($PerBulan as $index=>$data){
+                    print '["'.$data['bln'].'", '.$data['jmlPenjualan'].', "#76A7FA"],';
+                }
+            ?>
         ]);
         var view = new google.visualization.DataView(data);
         view.setColumns([0, 1,
